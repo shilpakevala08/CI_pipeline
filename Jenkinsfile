@@ -10,6 +10,7 @@ pipeline {
 
         stage('Run Java Program') {
             steps {
+                chmod +x HelloWorld.java
                 sh 'java HelloWorld'
             }
         }
