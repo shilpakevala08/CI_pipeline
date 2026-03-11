@@ -4,14 +4,13 @@ pipeline {
     stages {
         stage('Compile Java Program') {
             steps {
-                sh 'javac HelloWorld.java'
+                bat 'javac HelloWorld.java'
             }
         }
 
         stage('Run Java Program') {
             steps {
-                chmod +x HelloWorld.java
-                sh 'java HelloWorld'
+                bat 'java HelloWorld'
             }
         }
     }
